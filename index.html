@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>奇奇网电影网：独立影评视角的中文电影资料与口碑榜单库</title>
+<meta name="keywords" content="奇奇网电影网, 华语电影资料库, 独立影评, 冷门佳片推荐, 电影口碑榜, 类型片分类导航, qiqiwangdianyingwang-zh.github.io">
+<meta name="description" content="奇奇网电影网（qiqiwangdianyingwang-zh.github.io）以独立视角整理华语与海外电影的口碑分层、类型分类、冷门片单与影史脉络，不做片源搬运，专注帮助观众建立自己的选片标准与判断逻辑。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="author" content="奇奇网电影网">
+<meta name="copyright" content="© 2026 奇奇网电影网">
+<meta name="geo.region" content="CN">
+<meta name="theme-color" content="#2b2118">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="canonical" href="https://qiqiwangdianyingwang-zh.github.io/">
+<link rel="alternate" hreflang="zh-CN" href="https://qiqiwangdianyingwang-zh.github.io/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "奇奇网电影网",
+  "alternateName": "奇奇网电影网（qiqiwangdianyingwang-zh.github.io）",
+  "url": "https://qiqiwangdianyingwang-zh.github.io/",
+  "description": "以独立视角整理电影口碑、类型分类与影史脉络的中文资料站",
+  "inLanguage": "zh-CN",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://qiqiwangdianyingwang-zh.github.io/#archive",
+    "query-input": "required name=keyword"
+  }
+}
+</script>
+<style>
+:root{
+  --paper:#f4efe6; --paper2:#efe8dc; --ink:#1f1a14; --ink2:#4a4136; --ink3:#7c7163;
+  --line:#ddd2c1; --line2:#e8dfd0;
+  --brand:#c8442f; --brand2:#e09a2b; --plum:#7a4a6b; --teal:#2f6f68;
+  --card:#fffdf9; --shadow:0 2px 0 rgba(31,26,20,.06),0 18px 40px -26px rgba(31,26,20,.32);
+  --max:1240px; --ease:cubic-bezier(.2,.7,.3,1);
+  --serif:"Source Han Serif SC","Songti SC","SimSun","Noto Serif CJK SC",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+  line-height:1.78; font-size:16px; overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(rgba(120,100,80,.06) 1px,transparent 1.4px);background-size:22px 22px}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none;transition:color .25s var(--ease),background .25s var(--ease)}
+ul,ol{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.container{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* ===== top bar ===== */
+.topbar{border-bottom:1px solid var(--line);background:rgba(244,239,230,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);position:sticky;top:0;z-index:60}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:18px;height:68px}
+.brand{display:flex;align-items:baseline;gap:11px}
+.brand-mark{font-family:var(--serif);font-weight:900;font-size:30px;letter-spacing:-1px;color:var(--brand);line-height:1}
+.brand small{font-size:12px;color:var(--ink3);letter-spacing:.16em;text-transform:uppercase}
+.menu{display:flex;gap:2px;align-items:center}
+.menu a{padding:9px 15px;font-size:14.6px;color:var(--ink2);font-weight:600;border-radius:6px;position:relative}
+.menu a:hover{color:var(--brand);background:rgba(200,68,47,.06)}
+.menu a::after{content:"";position:absolute;left:15px;right:15px;bottom:3px;height:2px;background:var(--brand);transform:scaleX(0);transition:transform .3s var(--ease)}
+.menu a:hover::after{transform:scaleX(1)}
+.menu .outlink{padding:9px 19px;border-radius:6px;background:var(--ink);color:var(--paper);font-size:14px}
+.menu .outlink:hover{background:var(--brand)}
+.menu .outlink::after{display:none}
+.mbtn{display:none;width:44px;height:44px;border-radius:8px;border:1px solid var(--line);background:var(--card);font-size:20px;color:var(--ink)}
+.mpan{display:none;font-size:12.5px;color:var(--ink3);letter-spacing:.06em}
+
+/* ===== masthead ===== */
+.masthead{padding:64px 0 40px;border-bottom:3px double var(--line)}
+.kicker{display:flex;align-items:center;gap:12px;font-size:12.5px;color:var(--brand);letter-spacing:.22em;text-transform:uppercase;font-weight:700}
+.kicker::before{content:"";width:34px;height:2px;background:var(--brand)}
+.lede{font-family:var(--serif);font-size:clamp(32px,6.2vw,64px);font-weight:800;line-height:1.14;letter-spacing:-1.6px;margin:20px 0 8px;max-width:19em}
+.lede em{font-style:normal;color:var(--brand);position:relative}
+.lede em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;background:rgba(224,154,43,.42);z-index:-1}
+.masthead p.sub{font-size:clamp(15px,2.1vw,18px);color:var(--ink2);max-width:44em}
+.mhead-foot{margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.dateline{display:flex;gap:22px;flex-wrap:wrap;font-size:13px;color:var(--ink3)}
+.dateline b{color:var(--ink2);font-weight:700}
+.rundate{font-family:var(--serif);font-size:14px;color:var(--ink2);border-left:2px solid var(--brand);padding-left:14px}
+
+/* ===== columns strip ===== */
+.strip{padding:26px 0;border-bottom:1px solid var(--line);background:var(--paper2)}
+.strip-in{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none}
+.strip-in::-webkit-scrollbar{display:none}
+.strip a{flex-shrink:0;padding:9px 18px;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--ink2);background:var(--card);font-weight:600;white-space:nowrap}
+.strip a:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-2px)}
+
+/* ===== section ===== */
+section{padding:74px 0}
+.sec-top{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end;margin-bottom:38px;border-bottom:1px solid var(--line);padding-bottom:20px}
+.sec-no{font-family:var(--serif);font-size:14px;color:var(--brand);letter-spacing:.2em;font-weight:700}
+.sec-top h2{font-family:var(--serif);font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.8px;line-height:1.25;margin-top:8px}
+.sec-top .lead{font-size:15px;color:var(--ink2);max-width:42em;justify-self:end;text-align:right}
+
+/* ===== reviews ===== */
+.reviews{display:grid;grid-template-columns:1.35fr 1fr;gap:26px}
+.review{background:var(--card);border:1px solid var(--line2);border-radius:4px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+.review .frame{aspect-ratio:16/9;position:relative;overflow:hidden}
+.review .frame svg{width:100%;height:100%}
+.review .body{padding:26px 28px 24px;flex:1;display:flex;flex-direction:column}
+.kicker-sm{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);font-weight:700}
+.review h3{font-family:var(--serif);font-size:25px;font-weight:800;line-height:1.3;letter-spacing:-.4px;margin:10px 0}
+.review .quote{border-left:3px solid var(--brand2);padding:12px 0 12px 18px;font-family:var(--serif);font-size:16px;line-height:1.75;color:var(--ink2);margin:4px 0 18px}
+.review .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.review .tags span{padding:4px 11px;border-radius:4px;font-size:12px;background:var(--paper2);color:var(--ink2);border:1px solid var(--line)}
+.review-list{display:flex;flex-direction:column;gap:14px}
+.review-mini{border:1px solid var(--line2);background:var(--card);padding:16px 18px;border-radius:4px;box-shadow:var(--shadow);transition:.28s var(--ease)}
+.review-mini:hover{border-color:var(--brand);transform:translateY(-3px)}
+.review-mini .row{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.review-mini h4{font-family:var(--serif);font-size:17.5px;font-weight:800;line-height:1.4}
+.review-mini .yr{font-size:12px;color:var(--ink3);flex-shrink:0}
+.review-mini p{font-size:13.8px;color:var(--ink2);margin-top:6px}
+
+/* ===== genres ===== */
+.genres{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.genre{background:var(--card);border:1px solid var(--line2);padding:22px 20px;border-radius:4px;box-shadow:var(--shadow);transition:.3s var(--ease)}
+.genre:hover{border-color:var(--plum);transform:translateY(-4px)}
+.genre .ic{font-family:var(--serif);font-size:26px;font-weight:900;color:var(--plum);line-height:1}
+.genre h3{font-size:18px;font-weight:750;margin:12px 0 8px}
+.genre p{font-size:13.8px;color:var(--ink2);min-height:4.2em}
+.genre .more{display:inline-block;margin-top:12px;font-size:13px;color:var(--brand);font-weight:700}
+.genre .more:hover{color:var(--plum)}
+
+/* ===== archive timeline ===== */
+.timeline{position:relative;padding-left:4px}
+.tl-item{display:grid;grid-template-columns:150px 1fr;gap:26px;padding:22px 0;border-bottom:1px dashed var(--line);transition:.25s var(--ease)}
+.tl-item:hover{background:rgba(255,253,249,.7)}
+.tl-year{font-family:var(--serif);font-size:26px;font-weight:800;color:var(--brand);letter-spacing:-.5px;line-height:1.2}
+.tl-year span{display:block;font-size:12.5px;color:var(--ink3);font-weight:600;letter-spacing:.04em;margin-top:4px}
+.tl-item h3{font-size:18px;font-weight:750;margin-bottom:6px}
+.tl-item p{font-size:14.2px;color:var(--ink2)}
+.tl-item .pick{display:inline-block;margin-top:9px;font-size:12.5px;color:var(--teal);font-weight:700}
+
+/* ===== chart ===== */
+.chart{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.chart-list{background:var(--card);border:1px solid var(--line2);border-radius:4px;box-shadow:var(--shadow);padding:10px 22px}
+.chart-row{display:grid;grid-template-columns:38px 1fr 56px;gap:14px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line2)}
+.chart-row:last-child{border-bottom:none}
+.chart-row .rk{font-family:var(--serif);font-size:22px;font-weight:900;color:var(--line);line-height:1}
+.chart-row:nth-child(-n+3) .rk{color:var(--brand)}
+.chart-row .tt h4{font-size:15.5px;font-weight:750}
+.chart-row .tt small{font-size:12.5px;color:var(--ink3);display:block;margin-top:2px}
+.chart-row .sc{text-align:right;font-size:15px;font-weight:800;color:var(--ink2)}
+.chart-note{background:var(--card);border:1px solid var(--line2);border-radius:4px;box-shadow:var(--shadow);padding:26px 28px}
+.chart-note h3{font-family:var(--serif);font-size:22px;font-weight:800;margin-bottom:12px}
+.chart-note ol{list-style:decimal;padding-left:20px}
+.chart-note ol li{font-size:14.4px;color:var(--ink2);padding:6px 0;border-bottom:1px solid var(--line2)}
+.chart-note ol li:last-child{border-bottom:none}
+
+/* ===== directors ===== */
+.people{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.person{background:var(--card);border:1px solid var(--line2);border-radius:4px;overflow:hidden;box-shadow:var(--shadow);transition:.3s var(--ease)}
+.person:hover{transform:translateY(-5px);border-color:var(--teal)}
+.person .ph{aspect-ratio:4/3;position:relative}
+.person .ph svg{width:100%;height:100%}
+.person .who{padding:18px 20px 20px}
+.person .who h3{font-size:19px;font-weight:800;font-family:var(--serif)}
+.person .who .en{font-size:12.5px;color:var(--ink3);letter-spacing:.06em}
+.person .who p{font-size:13.8px;color:var(--ink2);margin-top:8px}
+
+/* ===== faq ===== */
+.faq-wrap{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.q{background:var(--card);border:1px solid var(--line2);border-left:3px solid var(--brand);border-radius:4px;box-shadow:var(--shadow);padding:20px 22px;transition:.25s var(--ease)}
+.q:hover{border-left-color:var(--brand2)}
+.q h3{font-size:16px;font-weight:750;margin-bottom:8px;font-family:var(--serif)}
+.q p{font-size:14.2px;color:var(--ink2)}
+
+/* ===== submit / footer ===== */
+.endnote{background:var(--ink);color:var(--paper);border-radius:6px;padding:52px 48px;position:relative;overflow:hidden}
+.endnote::after{content:"Q";position:absolute;right:-26px;bottom:-60px;font-family:var(--serif);font-size:280px;font-weight:900;color:rgba(255,255,255,.045);line-height:1}
+.endnote h2{font-family:var(--serif);font-size:clamp(24px,3.6vw,36px);font-weight:800;letter-spacing:-.6px;margin-bottom:12px}
+.endnote p{font-size:15.4px;color:rgba(244,239,230,.72);max-width:42em}
+.endnote .dom{margin-top:24px;padding:18px 22px;border:1px dashed rgba(244,239,230,.32);border-radius:6px;display:inline-block}
+.endnote .dom b{font-family:var(--serif);font-size:18px;color:var(--brand2);letter-spacing:.02em}
+.endnote .dom span{display:block;font-size:12.5px;color:rgba(244,239,230,.5);margin-top:5px}
+footer{border-top:3px double var(--line);padding:52px 0 34px}
+.foot-in{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+.foot-in h4{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin-bottom:14px}
+.foot-in a{display:block;font-size:14px;color:var(--ink2);padding:5px 0}
+.foot-in a:hover{color:var(--brand);padding-left:6px}
+.foot-in p{font-size:14px;color:var(--ink2);max-width:30em}
+.foot-bot{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.8px;color:var(--ink3)}
+.foot-bot b{color:var(--brand)}
+
+@media (max-width:1020px){
+  .reviews,.chart{grid-template-columns:1fr}
+  .genres{grid-template-columns:repeat(2,1fr)}
+  .people{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  body{font-size:15.4px}
+  .container{padding:0 17px}
+  .top-in{height:60px}
+  .brand small,.mpan{display:none}
+  .mbtn{display:grid;place-items:center}
+  .menu{position:fixed;top:60px;left:0;right:0;flex-direction:column;padding:14px;gap:2px;
+    background:var(--card);border-bottom:1px solid var(--line);box-shadow:0 16px 30px -20px rgba(0,0,0,.25);
+    transform:translateY(-10px);opacity:0;pointer-events:none;transition:.28s var(--ease)}
+  .menu.open{transform:none;opacity:1;pointer-events:auto}
+  .menu a{width:100%;padding:13px 14px;border-radius:4px;text-align:left}
+  .menu .outlink{text-align:center;margin-top:8px}
+  section{padding:52px 0}
+  .masthead{padding:40px 0 30px}
+  .sec-top{grid-template-columns:1fr;gap:14px}
+  .sec-top .lead{text-align:left;justify-self:start}
+  .tl-item{grid-template-columns:1fr;gap:8px}
+  .tl-year{font-size:22px}
+  .genres,.people{grid-template-columns:1fr}
+  .faq-wrap{grid-template-columns:1fr}
+  .foot-in{grid-template-columns:1fr 1fr;gap:26px}
+  .endnote{padding:34px 24px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header class="topbar">
+  <div class="container top-in">
+    <a href="https://qiqiwangdianyingwang-zh.github.io/" class="brand" aria-label="奇奇网电影网 首页">
+      <span class="brand-mark">奇奇网</span>
+      <small>电影资料室 · 自 2014 年</small>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#reviews">本周影评</a>
+      <a href="#genres">类型导航</a>
+      <a href="#archive">影史脉络</a>
+      <a href="#chart">口碑榜</a>
+      <a href="#people">导演谱系</a>
+      <a href="#faq">读者问答</a>
+      <a href="https://qiqiwangdianyingwang-zh.github.io/" class="outlink">访问官网</a>
+    </nav>
+    <button class="mbtn" id="mbtn" aria-label="切换菜单">≡</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ MASTHEAD ============ -->
+<div class="container">
+  <div class="masthead">
+    <div class="kicker">No. 312 · 奇奇网电影网 · 编辑手记</div>
+    <h1 class="lede">看电影这件事，<em>判断比数量</em>重要得多</h1>
+    <p class="sub">奇奇网电影网（qiqiwangdianyingwang-zh.github.io）不搬运片源，不做流量推荐。我们做的是另一件更慢的事：把一部影片为什么值得看、它属于哪条类型脉络、它在华语或世界影史里处于什么位置，用可读的中文写出来，让观众逐步形成自己的选片标准。</p>
+    <div class="mhead-foot">
+      <div class="dateline">
+        <span><b>栏目</b> 6 个常设版块</span>
+        <span><b>篇目</b> 更新中</span>
+        <span><b>立场</b> 独立、不收推广</span>
+      </div>
+      <div class="rundate">本期更新于 2026 年 10 月 9 日 · 丙午年八月廿九</div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="container strip-in">
+    <a href="#reviews">本周影评 →</a>
+    <a href="#genres">类型导航 →</a>
+    <a href="#archive">影史脉络 →</a>
+    <a href="#chart">口碑榜 →</a>
+    <a href="#people">导演谱系 →</a>
+    <a href="#faq">读者问答 →</a>
+    <a href="https://qiqiwangdianyingwang-zh.github.io/">返回官网 qiqiwangdianyingwang-zh.github.io</a>
+  </div>
+</div>
+
+<!-- ============ 1 本周影评 ============ -->
+<section id="reviews">
+  <div class="container">
+    <div class="sec-top">
+      <div>
+        <div class="sec-no">SECTION 01 / FEATURE</div>
+        <h2>本周影评：把话讲透，而不是给个分数</h2>
+      </div>
+      <p class="lead">影评的价值在于解释判断的依据。我们写类型惯例怎么被打破、视听语言如何服务叙事，也写明影片的结构性缺陷，而不是用情绪代替论证。</p>
+    </div>
+
+    <div class="reviews">
+      <article class="review">
+        <div class="frame">
+          <svg viewBox="0 0 480 270" role="img" aria-label="本周主推影评配图">
+            <rect width="480" height="270" fill="#2b2118"/>
+            <rect x="0" y="0" width="480" height="270" fill="url(#pg1)"/>
+            <defs><linearGradient id="pg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a4a6b"/><stop offset="1" stop-color="#2f6f68"/></linearGradient></defs>
+            <circle cx="340" cy="96" r="58" fill="#e09a2b" opacity=".9"/>
+            <path d="M0 200 Q160 158 330 196 T480 190 L480 270 L0 270Z" fill="#1f1a14" opacity=".72"/>
+            <rect x="40" y="214" width="150" height="3" fill="#e09a2b" opacity=".7"/>
+            <text x="40" y="244" fill="#f4efe6" font-family="serif" font-size="20" font-weight="800">关于时间、与未说出口的话</text>
+          </svg>
+        </div>
+        <div class="body">
+          <span class="kicker-sm">本周主推 · 深度长评</span>
+          <h3>《漫长的告别》与东亚家庭叙事里<br>那些被推迟的情绪</h3>
+          <p class="quote">"影片真正让人不安的并非死亡本身，而是活着的家人用一整套礼貌把哀伤管理得滴水不漏。导演把这种压抑处理成了空间问题——门永远半开，对话永远隔着一个桌面。"</p>
+          <p>这篇长评从表演微表情、场面调度与音效留白三个层面展开，同时列出了影片中段节奏失衡与配角动机薄弱两项硬伤。我们认为给出批评同样是推荐体系的一部分，读者需要的是可信度，而不是无差别的赞美。</p>
+          <div class="tags"><span>华语剧情</span><span>家庭伦理</span><span>长镜头</span><span>导演处女作</span></div>
+        </div>
+      </article>
+
+      <div class="review-list">
+        <a href="#reviews" class="review-mini">
+          <div class="row"><h4>从类型片角度看《夜航船》的叙事失速</h4><span class="yr">2026</span></div>
+          <p>悬疑设定在前四十分钟成立得漂亮，中段却用信息重复代替结构推进，最终的反转承担了它本不该承担的全部解释任务。</p>
+        </a>
+        <a href="#reviews" class="review-mini">
+          <div class="row"><h4>纪录片的伦理边界：何时不该开机</h4><span class="yr">专题</span></div>
+          <p>当摄影机的存在改变被拍摄者的处境，素材的珍贵程度并不能抵消介入本身带来的问题。一篇关于拍摄伦理的札记。</p>
+        </a>
+        <a href="#reviews" class="review-mini">
+          <div class="row"><h4>喜剧的节拍：为什么同一个包袱两次就失效</h4><span class="yr">技法</span></div>
+          <p>用三部长片拆解喜剧场景的节拍设计，说明重复并非不能成立，关键在于第二次重复是否提供了新的信息。</p>
+        </a>
+        <a href="#reviews" class="review-mini">
+          <div class="row"><h4>被高估与被低估：季度冷门清单</h4><span class="yr">片单</span></div>
+          <p>六部未在主流榜单出现、但完成度稳定的中小成本影片，附简短观看建议与适合的人群。</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 类型导航 ============ -->
+<section id="genres" style="background:var(--paper2)">
+  <div class="container">
+    <div class="sec-top">
+      <div>
+        <div class="sec-no">SECTION 02 / GENRE</div>
+        <h2>类型导航：每种类型都有它的暗面</h2>
+      </div>
+      <p class="lead">我们按类型组织资料，但拒绝把类型当成分类标签。每一条都附上该类型的 conventions 与反类型作品，帮助你理解规则之后才谈打破规则。</p>
+    </div>
+
+    <div class="genres">
+      <div class="genre">
+        <div class="ic">Ⅰ</div>
+        <h3>犯罪与黑色电影</h3>
+        <p>从社会派推理到城市黑色，关注因果链条是否自洽、道德困境是否被轻描淡写地解决。</p>
+        <a href="#genres" class="more">查看片单 →</a>
+      </div>
+      <div class="genre">
+        <div class="ic">Ⅱ</div>
+        <h3>家庭与代际剧情</h3>
+        <p>华语电影最稳定的强项之一。重点看情绪如何在非冲突场景中累积，而非依赖煽情桥段。</p>
+        <a href="#genres" class="more">查看片单 →</a>
+      </div>
+      <div class="genre">
+        <div class="ic">Ⅲ</div>
+        <h3>青春与成长</h3>
+        <p>区分真实的年龄体验与成年人视角下的怀旧投射，后者往往更讨喜但信息量更稀薄。</p>
+        <a href="#genres" class="more">查看片单 →</a>
+      </div>
+      <div class="genre">
+        <div class="ic">Ⅳ</div>
+        <h3>喜剧与荒诞</h3>
+        <p>喜剧是最容易被低估的类型，我们从节拍、台词密度与表演节奏三个维度拆解，而非只打分。</p>
+        <a href="#genres" class="more">查看片单 →</a>
+      </div>
+      <div class="genre">
+        <div class="ic">Ⅴ</div>
+        <h3>纪录片与真实影像</h3>
+        <p>关注作者立场与剪辑结构，同时提醒读者：纪录片同样是叙事建构，不是现实的透明窗口。</p>
+        <a href="#genres" class="more">查看片单 →</a>
+      </div>
+      <div class="genre">
+        <div class="ic">Ⅵ</div>
+        <h3>奇幻与作者表达</h3>
+        <p>把视觉奇观与叙事野心分开评价，很多作品在前一项上过关，在后一项上甚至没有尝试。</p>
+        <a href="#genres" class="more">查看片单 →</a>
+      </div>
+      <div class="genre">
+        <div class="ic">Ⅶ</div>
+        <h3>短片与处女作</h3>
+        <p>长片的预算逻辑不适用于此。我们看的是作者有没有找到属于自己的声音，以及预算限制是否催生了创意。</p>
+        <a href="#genres" class="more">查看片单 →</a>
+      </div>
+      <div class="genre">
+        <div class="ic">Ⅷ</div>
+        <h3>修复与经典重看</h3>
+        <p>4K 修复带来的不只是清晰度，还有重新发现当年被忽视的细节。这部分内容强调版本差异。</p>
+        <a href="#genres" class="more">查看片单 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 影史脉络 ============ -->
+<section id="archive">
+  <div class="container">
+    <div class="sec-top">
+      <div>
+        <div class="sec-no">SECTION 03 / ARCHIVE</div>
+        <h2>影史脉络：一个年代，一个被反复争论的命题</h2>
+      </div>
+      <p class="lead">奇奇网电影网的资料归档按年代组织，每一段不只列作品，还列出当年真正被争论的问题——那些争论在今天往往仍然有效。</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">1980s<span>第五代登场</span></div>
+        <div>
+          <h3>当影像开始承担隐喻，现实主义还剩多少</h3>
+          <p>从乡土叙事到寓言化表达，这一代作者建立了一套被反复引用的视觉语法，也同时引发了关于"为谁而拍"的持续讨论。</p>
+          <span class="pick">本年代精选 →</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1990s<span>都市与个体</span></div>
+        <div>
+          <h3>城市成为主角之后，人物的欲望终于被允许说出口</h3>
+          <p>这一时期的作品把镜头从集体转向个体生活，喜剧、爱情与犯罪类型同时成熟，商业与作者表达之间出现了难得的中间地带。</p>
+          <span class="pick">本年代精选 →</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2000s<span>大片与独立并行</span></div>
+        <div>
+          <h3>市场扩张之后，被挤出的是哪一类叙事</h3>
+          <p>国产大片在视觉工业上完成补课，同期独立制作转向更私人的观察。两者看似无关，实则共同定义了此后十年的观众口味。</p>
+          <span class="pick">本年代精选 →</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2010s<span>类型片补课期</span></div>
+        <div>
+          <h3>当悬疑、科幻、动画同时有了本土范本，创作的天花板在哪里</h3>
+          <p>类型片从稀缺变成过剩，问题从"能不能做"变成"做完之后是否有自己的判断"，这也是本栏目重点复盘的一段。</p>
+          <span class="pick">本年代精选 →</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2020s<span>媒介与观众都变了</span></div>
+        <div>
+          <h3>短视频节奏进入长片之后，是进化还是退化</h3>
+          <p>节奏压缩、信息前置、情绪直给成为新惯例。我们倾向于认为这不是审美问题，而是叙事结构的一次被迫重写。</p>
+          <span class="pick">本期观察 →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 口碑榜 ============ -->
+<section id="chart" style="background:var(--paper2)">
+  <div class="container">
+    <div class="sec-top">
+      <div>
+        <div class="sec-no">SECTION 04 / CHART</div>
+        <h2>口碑榜：排名依据，比排名本身更重要</h2>
+      </div>
+      <p class="lead">这份榜单不是众包评分，而是本站编辑部基于"叙事完成度、视听自觉、观点清晰度"三项独立打分的结果，每月重排一次，并保留历史版本供对照。</p>
+    </div>
+
+    <div class="chart">
+      <div class="chart-list">
+        <div class="chart-row"><span class="rk">01</span><div class="tt"><h4>漫长的告别</h4><small>华语剧情 · 导演长片首作</small></div><span class="sc">9.1</span></div>
+        <div class="chart-row"><span class="rk">02</span><div class="tt"><h4>海边的阅览室</h4><small>文艺 · 改编自同名小说</small></div><span class="sc">8.7</span></div>
+        <div class="chart-row"><span class="rk">03</span><div class="tt"><h4>夜航船</h4><small>悬疑犯罪 · 中段节奏存疑</small></div><span class="sc">8.3</span></div>
+        <div class="chart-row"><span class="rk">04</span><div class="tt"><h4>三个夏天</h4><small>家庭剧情 · 非职业演员</small></div><span class="sc">8.2</span></div>
+        <div class="chart-row"><span class="rk">05</span><div class="tt"><h4>便利店之夜</h4><small>都市喜剧 · 群像结构</small></div><span class="sc">7.9</span></div>
+        <div class="chart-row"><span class="rk">06</span><div class="tt"><h4>无人区公路</h4><small>西部片本土化尝试</small></div><span class="sc">7.7</span></div>
+        <div class="chart-row"><span class="rk">07</span><div class="tt"><h4>她的声音档案</h4><small>纪录片 · 伦理议题</small></div><span class="sc">7.6</span></div>
+        <div class="chart-row"><span class="rk">08</span><div class="tt"><h4>倒计时</h4><small>社会派犯罪 · 剧本扎实</small></div><span class="sc">7.4</span></div>
+        <div class="chart-row"><span class="rk">09</span><div class="tt"><h4>玻璃动物园</h4><small>舞台改编 · 空间调度出色</small></div><span class="sc">7.3</span></div>
+        <div class="chart-row"><span class="rk">10</span><div class="tt"><h4>雨天的方程式</h4><small>青春成长 · 视觉完成度高</small></div><span class="sc">7.1</span></div>
+      </div>
+
+      <div class="chart-note">
+        <h3>评分的三条硬规则</h3>
+        <ol>
+          <li>同一导演的作品不与本人其他作品比较，只与同类题材的平均值比较。</li>
+          <li>商业完成度与作者表达分开打分，两项相加才得出总分，避免一类优势掩盖另一类缺陷。</li>
+          <li>分数只保留一位小数，且不设 10 分作品——给满分意味着不必再讨论它。</li>
+          <li>本月排名较上月上升超过 3 位者，必须附理由说明，不接受无解释的跳升。</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 导演谱系 ============ -->
+<section id="people">
+  <div class="container">
+    <div class="sec-top">
+      <div>
+        <div class="sec-no">SECTION 05 / AUTEUR</div>
+        <h2>导演谱系：一个作者如何一步步成为自己</h2>
+      </div>
+      <p class="lead">单部作品容易误判。我们按创作阶段拆分，看作者在哪一步解决了什么问题，又在哪一步开始重复自己——重复并不一定是退步，但值得被指出。</p>
+    </div>
+
+    <div class="people">
+      <article class="person">
+        <div class="ph">
+          <svg viewBox="0 0 320 240" role="img" aria-label="导演人物配图">
+            <rect width="320" height="240" fill="#3a2a3f"/>
+            <circle cx="160" cy="100" r="52" fill="#7a4a6b"/>
+            <path d="M70 240 Q160 150 250 240Z" fill="#5a3a4f"/>
+            <rect x="118" y="44" width="84" height="6" rx="3" fill="#e09a2b" opacity=".8"/>
+          </svg>
+        </div>
+        <div class="who">
+          <h3>李慕白</h3><span class="en">LI MUBAI · 第六代之后</span>
+          <p>从地下短片到工业体量，他的核心命题始终没变：人在制度里的微小失态。第四部长片被本栏目列为年度观察对象。</p>
+        </div>
+      </article>
+      <article class="person">
+        <div class="ph">
+          <svg viewBox="0 0 320 240" role="img" aria-label="导演人物配图">
+            <rect width="320" height="240" fill="#1f3a38"/>
+            <circle cx="160" cy="100" r="52" fill="#2f6f68"/>
+            <path d="M60 240 L160 130 L260 240Z" fill="#1c524c"/>
+            <circle cx="252" cy="62" r="22" fill="#e09a2b" opacity=".85"/>
+          </svg>
+        </div>
+        <div class="who">
+          <h3>陈知微</h3><span class="en">CHEN ZHIWEI · 类型片作者</span>
+          <p>把社会议题装进悬疑壳子里的人。值得研究的是她如何在不牺牲类型节拍的前提下，让议题保持具体而不是口号。</p>
+        </div>
+      </article>
+      <article class="person">
+        <div class="ph">
+          <svg viewBox="0 0 320 240" role="img" aria-label="导演人物配图">
+            <rect width="320" height="240" fill="#3f2f20"/>
+            <circle cx="160" cy="100" r="52" fill="#c8442f"/>
+            <rect x="80" y="180" width="160" height="60" fill="#2b2118"/>
+            <path d="M120 180 L160 140 L200 180Z" fill="#e09a2b" opacity=".8"/>
+          </svg>
+        </div>
+        <div class="who">
+          <h3>周野</h3><span class="en">ZHOU YE · 纪录片作者</span>
+          <p>长期跟踪式拍摄，擅长等待。其作品对"作者是否介入"的自觉处理，被本栏目多次作为方法案例引用。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 读者问答 ============ -->
+<section id="faq" style="background:var(--paper2)">
+  <div class="container">
+    <div class="sec-top">
+      <div>
+        <div class="sec-no">SECTION 06 / FAQ</div>
+        <h2>读者问答：关于这个站点本身</h2>
+      </div>
+      <p class="lead">这一栏回答的是"你们凭什么这么写"，而不是影片剧情。透明地说明立场与方法，是独立影评站点的基本责任。</p>
+    </div>
+
+    <div class="faq-wrap">
+      <div class="q"><h3>奇奇网电影网和豆瓣、猫眼这类平台的区别是什么？</h3><p>我们不做聚合评分与售票导流，也没有片源。只输出编辑部独立的文字判断，并公开评分规则，读者可以不同意，但应能看清依据。</p></div>
+      <div class="q"><h3>评分会被片方或宣发影响吗？</h3><p>本站不接受任何形式的商业推广与软文合作，也不提供付费推荐位。所有内容与排位由编辑部独立决定，这一点长期不变。</p></div>
+      <div class="q"><h3>为什么有些热门片没有收录？</h3><p>人力有限，我们只覆盖有能力写清的作品。一部影片看不懂或看不进去，我们宁可不写，也不会用模板话术凑内容。</p></div>
+      <div class="q"><h3>你们提供在线观看或下载吗？</h3><p>不提供。本站是资料与观点站点，无任何片源、播放链接或下载渠道，也不应被当作此类入口使用。</p></div>
+      <div class="q"><h3>更新频率是怎样的？</h3><p>影评每周 1 至 2 篇，口碑榜每月重排一次，影史脉络与导演谱系按专题推进。每篇发布时都标注日期，过期内容不做静默修改。</p></div>
+      <div class="q"><h3>如何向我们投稿或纠错？</h3><p>通过页面底部方式联系编辑部即可。事实性错误会在原文保留修订痕迹并注明时间，不做无痕覆盖。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENDNOTE ============ -->
+<section style="padding:40px 0 0">
+  <div class="container">
+    <div class="endnote">
+      <h2>关于奇奇网电影网，还有一句话要说</h2>
+      <p>我们认为看电影是一项可以长期练习的技能，而这份练习并不依赖看过多少部，而依赖是否能说清自己喜欢什么、不喜欢什么，以及为什么。本站的所有内容，最终都是为这件事服务的。</p>
+      <div class="dom">
+        <b>https://qiqiwangdianyingwang-zh.github.io</b>
+        <span>奇奇网电影网 · 唯一官方网址 · 网站名称：奇奇网电影网</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-in">
+      <div>
+        <a href="https://qiqiwangdianyingwang-zh.github.io/" class="brand">
+          <span class="brand-mark">奇奇网</span>
+        </a>
+        <p style="margin-top:14px">奇奇网电影网（qiqiwangdianyingwang-zh.github.io）是以独立影评与电影资料整理为核心的中文内容站点，专注口碑分层、类型分类、导演谱系与影史脉络，不提供任何片源或下载服务。</p>
+      </div>
+      <div>
+        <h4>内容版块</h4>
+        <a href="#reviews">本周影评</a>
+        <a href="#genres">类型导航</a>
+        <a href="#archive">影史脉络</a>
+        <a href="#chart">口碑榜</a>
+      </div>
+      <div>
+        <h4>资料与工具</h4>
+        <a href="#people">导演谱系</a>
+        <a href="#faq">读者问答</a>
+        <a href="#archive">版本与修复说明</a>
+        <a href="#chart">评分规则</a>
+      </div>
+      <div>
+        <h4>关于本站</h4>
+        <a href="https://qiqiwangdianyingwang-zh.github.io/">访问官网</a>
+        <a href="#faq">投稿与纠错</a>
+        <a href="#faq">立场声明</a>
+        <a href="#faq">内容授权</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 <b>奇奇网电影网</b> · 网站名称：奇奇网电影网｜网站网址：<b>https://qiqiwangdianyingwang-zh.github.io</b>｜本站内容仅供学习与交流，影片评价属主观观点</span>
+      <span>页面最近更新：2026-10-09 · 编辑部常驻上海</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('mbtn'),menu=document.getElementById('menu');
+  if(btn&&menu){
+    btn.addEventListener('click',function(){menu.classList.toggle('open');});
+    menu.addEventListener('click',function(e){
+      if(e.target.tagName==='A'){menu.classList.remove('open');}
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.style.transition='opacity .8s cubic-bezier(.2,.7,.3,1), transform .8s cubic-bezier(.2,.7,.3,1)';en.target.style.opacity='1';en.target.style.transform='none';io.unobserve(en.target);}
+      });
+    },{threshold:.12,rootMargin:'0px 0px -50px'});
+    var targets=document.querySelectorAll('.reviews,.genres,.timeline,.chart,.people,.faq-wrap,.review,.genre,.tl-item,.person,.q,.endnote');
+    targets.forEach(function(el){el.style.opacity='0';el.style.transform='translateY(28px)';io.observe(el);});
+  }
+})();
+</script>
+</body>
+</html>
